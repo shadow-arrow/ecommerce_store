@@ -1,0 +1,220 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-size: .915rem;
+    font-family: "Segoe UI";
+    color: #555;
+}
+
+.icon-color {
+    color: rgb(125, 125, 125);
+}
+
+.navbar {
+    padding: .7rem 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    /* -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .08); */
+}
+
+.bg-light {
+    background-color: #ffffff !important;
+}
+
+.navbar-brand {
+    margin-right: 1.5rem;
+}
+
+.navbar-light .navbar-brand {
+    color: #555;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: .85rem;
+        padding-left: .85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-inline {
+        margin: .5rem 0 !important;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f96332;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar .badge {
+    padding: .35em .6em;
+    font-size: 80%;
+    font-weight: 500;
+    border-radius: 10rem;
+}
+
+.navbar .badge-danger {
+    background-color: #f96332;
+}
+
+.brand {
+    color: #555;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.brand:hover {
+    text-decoration: none;
+    color: #f96332;
+}
+
+
+/* Search Form */
+
+.navbar .form-control {
+    padding: .35rem .75rem;
+    font-size: .9rem;
+    height: auto;
+}
+
+.navbar .form-control:focus {
+    color: #555;
+    border-color: rgba(249, 99, 50, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(249, 99, 50, 0.5);
+}
+
+.navbar .input-group-text {
+    background-color: #fff;
+}
+
+.navbar form button:hover {
+    cursor: pointer;
+}
+
+.navbar form button:focus {
+    outline: none;
+}
+
+.navbar form button:hover>svg {
+    color: #f96332;
+}
+
+.dropdown-menu {
+    padding: .2rem 0;
+}
+
+.dropdown-divider {
+    margin: .25rem 0;
+}
+
+
+/*==============================*/
+
+#main-contain {
+    position: relative;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: transparent;
+}
+
+#main-contain .title h6 {
+    color: #555;
+    margin: 1rem 0;
+    font-size: 1.15rem;
+    font-weight: 400;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+@media (max-width: 768px) {
+    #main-contain {
+        padding-top: 0;
+    }
+    #main-contain .title h6 {
+        margin: .75rem 0 .5rem;
+    }
+}
+
+
+/*
+ *  STYLE 3
+ */
+
+#style-3::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 0;
+}
+
+#style-3::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb {
+    background-color: #929ba3;
+    border-radius: 0;
+}
+
+
+/**/
+
+#style-4::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 0;
+}
+
+#style-4::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+    background-color: #dbdbdb;
+    border-radius: 0;
+}
+
+
+/*===== LEFT SIDE =====*/
+
+.mg-bottom-1 {
+    margin-bottom: 1px;
+}
+
+.left-side .side-nav a {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+.left-side .side-nav .nav-link {
+    padding: .4rem 0;
+}
+
+@media (max-width: 768px) {
+    .left-side .side-nav .nav-link {
+        padding: .25rem 0;
+    }
+}
+
+.left-side .side-nav .active {
+    color: #f96332;
+}
+
+.left-side .side-nav a:hover {
+    color: #f96332;
+}

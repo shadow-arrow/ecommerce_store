@@ -1,0 +1,296 @@
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #d0d0d0;
+    color: #555 !important;
+    font-weight: 500;
+}
+
+.table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>th {
+    padding: 9px 12px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #d0d0d0;
+    color: #555;
+}
+
+.table>thead>tr>th:hover {
+    cursor: pointer;
+}
+
+.table>thead>tr>th:focus {
+    outline-color: #d0d0d0;
+}
+
+.table>thead>tr>th .size {
+    font-size: 17px;
+    padding-top: 2px;
+}
+
+
+/* Tables - Border */
+
+.table-bordered {
+    border: 1px solid #d0d0d0;
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #d0d0d0;
+}
+
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border-bottom-width: 2px;
+}
+
+
+/* Customer - Datables */
+
+.dataTables_length {
+    float: left;
+}
+
+#history_filter {
+    float: right;
+}
+
+#orders_filter {
+    float: right;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #555;
+}
+
+.dataTables_info {
+    color: #555;
+    float: left;
+}
+
+
+/* Customer - Select */
+
+label select {
+    margin: 0 5px;
+    border: 1px solid #d0d0d0;
+    color: #555;
+    background-color: transparent;
+    padding: 4px;
+}
+
+label select:focus {
+    outline-color: #d0d0d0;
+}
+
+label select option {
+    background-color: #ffffff;
+}
+
+
+/* Customer - Search */
+
+label input {
+    margin-left: 10px;
+    border: 1px solid #d0d0d0;
+    color: #555;
+    background-color: transparent;
+    padding: 4px 5px 4px 8px;
+    font-weight: normal;
+    width: 200px;
+}
+
+label input:focus {
+    outline-color: #d0d0d0;
+}
+
+
+/* Customer - Pagination */
+
+.dataTables_paginate {
+    float: right;
+}
+
+.paging_simple_numbers>a {
+    color: #555;
+    width: 80px;
+    height: 32px;
+    padding: 5px;
+    border: 1px solid #d0d0d0;
+    display: inline-block;
+    text-align: center;
+}
+
+.paging_simple_numbers>a:first-child {
+    border-right: none;
+}
+
+.paging_simple_numbers>span>a {
+    color: #555;
+    border: 1px solid #d0d0d0;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    border-right: none;
+}
+
+.paging_simple_numbers a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ed1d27;
+}
+
+.ellipsis {
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #d0d0d0;
+    text-align: center;
+    border-right: none;
+}
+
+
+/* Customer - Responsivve */
+
+@media(max-width: 500px) {
+    #example_filter {
+        float: none;
+    }
+    label select {
+        margin: 0 5px 0 20px;
+    }
+    .dataTables_paginate {
+        float: left;
+        margin-top: 10px;
+    }
+    .paging_simple_numbers>a {
+        width: 65px;
+    }
+    .paging_simple_numbers>span>a {
+        width: 28px;
+    }
+}
+
+
+/* TABLE */
+
+.result-detail table {
+    font-size: 14px;
+}
+
+.result-detail table h5 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.result-detail .giai {
+    color: #fff !important;
+    background-color: #ed1d27;
+    border: 1px solid #ed1d27;
+    width: 25%;
+}
+
+.result-detail .g-color {
+    color: #ed1d27 !important;
+    background-color: #e6e6e6;
+    border: none;
+}
+
+.result-detail table,
+.result-detail th,
+.result-detail td {
+    border: 1px solid #e6e6e6;
+    border-collapse: collapse;
+}
+
+.result-detail table th {
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.result-detail table td {
+    padding: 27px 12px;
+    font-weight: bold;
+}
+
+.result-detail table td span {
+    color: #ed1d27 !important;
+}
+
+/*======== Custom =========*/
+.m-info {
+    border: 1px dashed #ccc;
+    padding: 8px 15px 12px;
+    border-radius: .25rem;
+}
+
+.m-info .table {
+    margin-bottom: 0;
+}
+
+td {
+    padding: 4px 10px 4px 0;
+}
+
+.active {
+    color: #28a745;
+}
+
+.deactive {
+    color: #dc3545;
+}
+
+.card {
+    border: 1px dashed #ccc;
+}
+
+.card-body {
+    padding: 1rem 0;
+}
+
+.g-color {
+    color: #ed1d27;
+}
+
+.g-color:hover {
+    color: #ed1d27;
+}
+
+.products-info {
+    padding: 0 1rem;
+    border: 1px dashed #ccc;
+    border-radius: .25rem;
+}
+
+.address-info {
+    padding: .55rem 1rem;
+    border: 1px dashed #ccc;
+    border-radius: .25rem;
+}
+
+.br {
+    border-radius: 1rem;
+}
+
+.table .btn {
+    padding: .4rem;
+}

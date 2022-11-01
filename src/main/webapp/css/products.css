@@ -1,0 +1,86 @@
+
+/*===== RIGHT SIDE =====*/
+
+.right-side .sort a {
+    color: #f96332;
+}
+
+.right-side .sort a:hover {
+    color: #0084ff;
+}
+
+.product .status {
+    position: absolute;
+    z-index: 1000;
+}
+
+.product .status img {
+    width: 75%;
+}
+
+.product .img {
+    position: relative;
+}
+
+.product .img:hover {
+    cursor: pointer;
+}
+
+.product .img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product .img .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.img:hover .overlay {
+    height: 25%;
+}
+
+.product .img .overlay p>a {
+    color: #fff;
+    position: absolute;
+    font-size: .9rem;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.product .img .overlay p>a:hover {
+    color: #f96332;
+    text-decoration: none;
+}
+
+.product .description h6 {
+    font-size: .9rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.product .description h6>a {
+    color: #555;
+}
+
+.product .description h6>a:hover {
+    color: #f96332;
+    text-decoration: none;
+}
+
+.product .description p {
+    font-size: .9rem;
+    margin-bottom: .2rem;
+}
