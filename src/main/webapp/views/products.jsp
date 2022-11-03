@@ -20,11 +20,11 @@
         <link rel="stylesheet" href="css/products.css">
     </head>
     <body>
-        <%@include file="common/nav.jsp"%>
+        <%@include file="../common/nav.jsp"%>
 
-        <c:if test="${listProduct eq null}">
+<%--        <c:if test="${listProduct eq null}">
             <c:redirect url="filter"/>
-        </c:if>
+        </c:if>--%>
 
         <!-- Cover -->
         <div id="main-contain" class="container">
