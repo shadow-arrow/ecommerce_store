@@ -21,7 +21,20 @@ public class ProductServiceImpl implements hopkq.store.services.ProductService {
     public List<Product> getAllProduct() {
         List<Product> listProduct = new ArrayList<>();
         try {
-            listProduct = productRepositor.findAllByStatusIn(new String[]{Common.Status.STATUS_PRODUCT_AVAILABLE,Common.Status.STATUS_PRODUCT_SALE});
+            listProduct = productRepositor.findAllByStatusIn(new String[]{Common.Status.STATUS_PRODUCT_AVAILABLE, Common.Status.STATUS_PRODUCT_SALE});
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return listProduct;
+    }
+
+    @Override
+    public List<Product> getProductByCategoryID(int id) {
+        List<Product> listProduct = new ArrayList<>();
+        try {
+            listProduct = productRepositor.getProductByCategoryId(id);
 
         } catch (Exception ex) {
             ex.printStackTrace();

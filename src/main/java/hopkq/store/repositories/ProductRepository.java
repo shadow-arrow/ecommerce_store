@@ -13,4 +13,5 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     @Query(value = "SELECT * FROM products Where Status in (?1)", nativeQuery = true)
     List<Product> findAllByStatusIn(String[] status);
 
+    List<Product> getProductByCategoryId(int id);
 }
