@@ -43,15 +43,17 @@
                                 <c:choose>
                                     <c:when test="${cId == 0}">
                                         <li class="nav-item">
-                                            <a class="nav-link active" href="filter?categoryId=0">
+                                            <a class="nav-link active filter">
                                                 <i class="mr-2"></i> Tất cả
+                                                <input class="category-id" type="hidden" value="0">
                                             </a>
                                         </li>
                                     </c:when>
                                     <c:otherwise>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="filter?categoryId=0">
+                                            <a class="nav-link filter">
                                                 <i class="mr-2"></i> Tất cả
+                                                <input class="category-id" type="hidden" value="0">
                                             </a>
                                         </li>
                                     </c:otherwise>
@@ -60,15 +62,17 @@
                                     <c:choose>
                                         <c:when test="${cId == i.id}">
                                             <li class="nav-item">
-                                                <a class="nav-link active" href="filter?categoryId=${i.id}">
+                                                <a class="nav-link active filter">
                                                     <i class="mr-2"></i> ${i.category}
+                                                    <input class="category-id" type="hidden" value="${i.id}">
                                                 </a>
                                             </li>
                                         </c:when>
                                         <c:otherwise>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="filter?categoryId=${i.id}">
+                                                <a class="nav-link filter">
                                                     <i class="mr-2"></i> ${i.category}
+                                                    <input class="category-id" type="hidden" value="${i.id}">
                                                 </a>
                                             </li>
                                         </c:otherwise>
@@ -88,14 +92,15 @@
                             Sản phẩm
                             <span class="float-right sort" style="font-size: 1rem;">
                                         Sắp xếp giá:
-                                        <a href="sort?flat=1" class="mr-2 ml-2">Tăng dần</a>
-                                        <a href="sort?flat=2">Giảm dần</a>
+                                        <a class="mr-2 ml-2" id="sort-ascending">Tăng dần</a>
+                                        <a id="sort-descending">Giảm dần</a>
+                                        <input type="hidden" id="cid" value="0">
                                     </span>
                         </h6>
                     </div>
                 </div>
 
-                <div class="row mt-2">
+                <div class="row mt-2 product">
                     <c:if test="${listProduct eq null || listProduct.size() == 0}">
                         <div class="col-12">
                             <h5 class="text-center">Không tìm thấy sản phẩm nào.</h5>
@@ -141,8 +146,9 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/products.js"></script>
 </body>
 </html>

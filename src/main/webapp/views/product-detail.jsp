@@ -20,17 +20,17 @@
         <link rel="stylesheet" href="css/product-details.css">
     </head>
     <body>
-        <%@include file="common/nav.jsp"%>      
-        
-        <div id="main-contain" class="container">
-            <c:if test="${product eq null}">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-center">Không tìm thấy sản phẩm nào.</h4>
-                        <h6 class="text-center"><a href="products.jsp">Quay lại ></a></h6>
-                    </div>
+    <%@include file="../common/nav.jsp" %>
+
+    <div id="main-contain" class="container">
+        <c:if test="${product eq null}">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-center">Không tìm thấy sản phẩm nào.</h4>
+                    <h6 class="text-center"><a href="home">Quay lại ></a></h6>
                 </div>
-            </c:if>
+            </div>
+        </c:if>
             <c:if test="${product ne null}">
                 <div class="row">
                     <div class="col-md-6">
@@ -47,7 +47,7 @@
                                     <span class="badge badge-success mg-left-10">SALE</span>
                                 </c:if>
                             </p>
-                            <a href="products.jsp" class="go-back">Trở về</a>
+                           <%-- <a href="products.jsp" class="go-back">Trở về</a>--%>
                             <a href="addtocart?pid=${product.id}" class="btn-add-to-cart">
                                 <i class="fas fa-cart-plus fa-fw fa-lg mg-right-5"></i> Thêm vào giỏ hàng
                             </a>

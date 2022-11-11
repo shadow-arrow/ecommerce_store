@@ -8,7 +8,10 @@ public interface ProductService {
 
     List<Product> getAllProduct();
 
-    List<Product> getProductByCategoryID(int id);
+    List<Product> getProductsByCategoryID(int id);
 
+    List<Product> getProductsByCategoryIDAndSort(int id, boolean sort);
+
+    Product getProductByID(int id);
 
 }
