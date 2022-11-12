@@ -27,7 +27,7 @@
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="cart.jsp">
                             Giỏ hàng 
-                            <span class="badge badge-danger">${listCart ne null ? listCart.size() : 0}</span>
+                            <span class="badge badge-danger">${cart.listProduct ne null ? cart.listProduct.size() : 0}</span>
                         </a>
                     </li>
                     <c:if test="${currentLoginAccount ne null}">    

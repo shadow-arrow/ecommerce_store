@@ -2,6 +2,7 @@ package hopkq.store.services.impl;
 
 
 import hopkq.store.entities.Product;
+import hopkq.store.models.ProductModel;
 import hopkq.store.repositories.ProductRepository;
 import hopkq.store.services.ProductService;
 import hopkq.store.utils.Common;

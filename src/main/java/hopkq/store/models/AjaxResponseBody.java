@@ -1,4 +1,4 @@
-package hopkq.store.model;
+package hopkq.store.models;
 
 import lombok.Data;
 

@@ -2,7 +2,7 @@ package hopkq.store.controllers.client;
 
 
 import hopkq.store.entities.Product;
-import hopkq.store.model.AjaxResponseBody;
+import hopkq.store.models.AjaxResponseBody;
 import hopkq.store.services.CategoryService;
 import hopkq.store.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,5 +8,10 @@ public class Common {
         public static final String STATUS_PRODUCT_NOT_AVAILABLE = "3";
     }
 
+    public class DTO {
+
+
+
+    }
 
 }
