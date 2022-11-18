@@ -17,12 +17,12 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
-    @RequestMapping(value = "home", method = RequestMethod.GET)
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getAllCategories(ModelMap modelMap) {
         List<Product> listProduct = productService.getAllProduct();
         List<Category> listCategory = categoryService.getAllCategory();

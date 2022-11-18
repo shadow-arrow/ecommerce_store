@@ -71,6 +71,7 @@ $(document).ready(function () {
     });
 
     $('#sort-ascending').click(function () {
+
         let cid = $("#cid").val();
         $.ajax({
             type: "GET",
@@ -103,8 +104,8 @@ $(document).ready(function () {
                 console.log("ERROR : ", e);
             }
         });
-
     });
+
 
 });
 
@@ -126,13 +127,13 @@ function showProduct(data) {
         "                                        </div>" : "";
     result += "                                    <div class=\"img\">\n"
         + "                                        <img src=\"assets/images/products/" + data.imageLink + "\" alt=\"${listData[i].imageLink}\">\n"
-        + "                                        <div class=\"overlay\">\n"
-        + "                                            <p>\n"
-        + "                                                <a href=\"addtocart?id=${listData[i].id}\">\n"
-        + "                                                    Thêm vào giỏ\n"
-        + "                                                </a>\n"
-        + "                                            </p>\n"
-        + "                                        </div>\n"
+        /*  + "                                        <div class=\"overlay\">\n"
+          + "                                            <p>\n"
+          + "                                                <a class=\"add-to-cart\">\n"
+          + "                                                    Thêm vào giỏ\n"
+          + "                                                </a>"
+          + "                                            </p>\n"
+          + "                                        </div>\n"*/
         + "                                    </div>\n"
         + "                                    <div class=\"description text-center\">\n"
         + "                                        <h6><a href=\"product?id=" + data.id + "\">" + data.name + "</a></h6>\n"
@@ -141,4 +142,5 @@ function showProduct(data) {
         + "                                </div>\n"
         + "                            </div>";
     return result;
+
 }

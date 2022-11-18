@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String getDetailProduct(@RequestParam(name = "id") int id, ModelMap modelMap) {

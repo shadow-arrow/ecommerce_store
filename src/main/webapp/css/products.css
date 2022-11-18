@@ -1,4 +1,3 @@
-
 /*===== RIGHT SIDE =====*/
 
 .right-side .sort a {
@@ -48,7 +47,7 @@
     height: 25%;
 }
 
-.product .img .overlay p>a {
+.product .img .overlay p > a {
     color: #fff;
     position: absolute;
     font-size: .9rem;
@@ -60,7 +59,7 @@
     text-align: center;
 }
 
-.product .img .overlay p>a:hover {
+.product .img .overlay p > a:hover {
     color: #f96332;
     text-decoration: none;
 }
@@ -71,11 +70,11 @@
     margin-bottom: .5rem;
 }
 
-.product .description h6>a {
+.product .description h6 > a {
     color: #555;
 }
 
-.product .description h6>a:hover {
+.product .description h6 > a:hover {
     color: #f96332;
     text-decoration: none;
 }
@@ -83,4 +82,12 @@
 .product .description p {
     font-size: .9rem;
     margin-bottom: .2rem;
+}
+
+.sort {
+    cursor: pointer;
+}
+
+.filter {
+    cursor: pointer;
 }

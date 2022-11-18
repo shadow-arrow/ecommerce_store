@@ -4,7 +4,7 @@
     Author     : Shado
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 
 <!-- Nav -->
 <nav class="navbar navbar-expand-md bg-light navbar-light">
@@ -25,31 +25,33 @@
                         </div>
                     </form>
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="cart.jsp">
-                            Giỏ hàng 
-                            <span class="badge badge-danger">${cart.listProduct ne null ? cart.listProduct.size() : 0}</span>
+                        <a class="nav-link" href="cart">
+                            Giỏ hàng
+                            <span id="total-product"
+                                  class="badge badge-danger">${listCart ne null ? listCart.size() : 0}</span>
                         </a>
                     </li>
-                    <c:if test="${currentLoginAccount ne null}">    
+                    <c:if test="${account ne null}">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ${currentLoginAccount.email}
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    ${account.email}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="user-profile.jsp">Thông tin cá nhân</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="logout">Đăng xuất</a>
+                                <a class="dropdown-item" href="/logout">Đăng xuất</a>
                             </div>
                         </li>
                     </c:if>
-                    <c:if test="${currentLoginAccount eq null}">
+                    <c:if test="${account eq null}">
                         <li class="nav-item">
-                            <a class="nav-link" href="register.jsp">Đăng ký</a>
+                            <a class="nav-link" href="/register-page">Đăng ký</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.jsp">Đăng nhập</a>
+                            <a class="nav-link" href="/login-page">Đăng nhập</a>
                         </li>
-                    </c:if>  
+                    </c:if>
                 </ul>
             </div>
         </div>

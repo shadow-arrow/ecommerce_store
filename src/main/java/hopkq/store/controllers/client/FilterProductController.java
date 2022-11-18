@@ -19,10 +19,8 @@ import java.util.List;
 public class FilterProductController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
-    @Autowired
-    CategoryService categoryService;
 
     @RequestMapping(value = "filter", method = RequestMethod.GET)
     @ResponseBody
@@ -51,7 +49,7 @@ public class FilterProductController {
 
         AjaxResponseBody<Product> result = new AjaxResponseBody();
         try {
-            List<Product> listProduct = productService.getProductsByCategoryIDAndSort(categoryID, flat == 1 );
+            List<Product> listProduct = productService.getProductsByCategoryIDAndSort(categoryID, flat == 1);
             if (listProduct.isEmpty()) {
                 result.setMsg("no data !");
             } else {

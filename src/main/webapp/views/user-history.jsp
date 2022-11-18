@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="css/user.css">
     </head>
     <body>
-        <%@include file="common/user-nav.jsp"%>
+        <%@include file="../common/user-nav.jsp"%>
 
         <!-- Cover -->
         <div id="main-contain" class="container">
@@ -32,7 +32,7 @@
                                 <h6>Danh mục sản phẩm</h6>
                             </div>
                         </div>
-                        <%@include file="common/user-sidenav.jsp"%>                      
+                        <%@include file="../common/user-sidenav.jsp"%>
                     </div>
                 </div>
                 <div class="col-md-9">

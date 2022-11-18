@@ -16,8 +16,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/product-details.css">
 </head>
 <body>
 <%@include file="../common/nav.jsp" %>
@@ -49,9 +49,16 @@
                         </c:if>
                     </p>
                         <%-- <a href="products.jsp" class="go-back">Trở về</a>--%>
-                    <a href="addtocart?id=${product.id}" class="btn-add-to-cart">
-                        <i class="fas fa-cart-plus fa-fw fa-lg mg-right-5"></i> Thêm vào giỏ hàng
-                    </a>
+                        <%--href="add-to-cart?id=${product.id}"--%>
+                    <div class="counter">
+                        <span id="decrease" class="down">-</span>
+                        <input type="text" id="quantity" value="1">
+                        <span id="increase" class="up">+</span>
+                        <a class="btn-add-to-cart text-white" id="add-to-cart">
+                            <input type="hidden" id="product-id" value="${product.id}">
+                            <i class="fas fa-cart-plus fa-fw fa-lg mg-right-5"></i> Thêm vào giỏ hàng
+                        </a>
+                    </div>
                     <div class="row">
                         <div class="col-md-12 info">
                             <p class="description bd-t pt-3">
@@ -86,8 +93,9 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/product-detail.js"></script>
 </body>
 </html>

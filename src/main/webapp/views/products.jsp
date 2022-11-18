@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="../css/products.css">
 </head>
 <body>
 <%@include file="../common/nav.jsp" %>
@@ -117,16 +117,17 @@
                                     </c:if>
                                     <div class="img">
                                         <img src="assets/images/products/${i.imageLink}" alt="${i.imageLink}">
-                                        <div class="overlay">
-                                            <p>
-                                                <a href="addtocart?id=${i.id}">
-                                                    Thêm vào giỏ
-                                                </a>
-                                            </p>
-                                        </div>
+                                            <%-- <div class="overlay">
+                                                 <p>
+                                                     <a class="add-to-cart">
+                                                         <input type="hidden" class="product-id" value="${i.id}">&lt;%&ndash;href="/add-to-cart?id=${i.id}"&ndash;%&gt;
+                                                         Thêm vào giỏ
+                                                     </a>
+                                                 </p>
+                                             </div>--%>
                                     </div>
                                     <div class="description text-center">
-                                        <h6><a href="product?id=${i.id}">${i.name}</a></h6>
+                                        <h6><a href="/product?id=${i.id}">${i.name}</a></h6>
                                         <p>
                                             <fmt:formatNumber type="number" maxFractionDigits="3"
                                                               value="${i.price}"/><sup>đ</sup>

@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.Instant;
 
 @Entity
@@ -32,7 +33,7 @@ public class Account {
     private Integer status;
 
     @Column(name = "Create_Date", nullable = false)
-    private Instant createDate;
+    private Timestamp createDate;
 
 
 }

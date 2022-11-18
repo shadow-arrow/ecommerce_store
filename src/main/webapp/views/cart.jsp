@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/common.css">
 
     <style>
         .btn-number {
@@ -42,14 +42,14 @@
 <body>
 <%@include file="../common/nav.jsp" %>
 
-<div class="container pt-5 pb-5">
-    <c:if test="${cart.listProduct eq null}">
+<div class="container pt-5 pb-5 cart">
+    <c:if test="${listCart.size() == 0}">
         <h5 class="text-center">Không có sản phẩm nào trong giỏ hàng.</h5>
         <div class="text-center">
-            <a href="products.jsp" class="btn btn-info mt-3">Tiếp tục mua hàng</a>
+            <a href="/home" class="btn btn-info mt-3">Tiếp tục mua hàng</a>
         </div>
     </c:if>
-    <c:if test="${cart.listProduct ne null}">
+    <c:if test="${listCart.size() != 0}">
         <h5>Giỏ hàng của bạn:</h5>
         <table class="table table-striped mt-3">
             <thead>
@@ -63,26 +63,28 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${cart.listProduct}" var="i" varStatus="no">
+            <c:forEach items="${listCart}" var="i" varStatus="no">
                 <tr>
                     <th scope="row">${no.index+1}</th>
                     <td>
                         <a href="product?id=${i.id}" target="_blank">${i.name}</a>
                     </td>
                     <td>
-                        <fmt:formatNumber type="number" maxFractionDigits="3" value="${i.price}"/><sup>đ</sup>
+                        <fmt:formatNumber type="number" maxFractionDigits="3" value="${i.unitPrice}"/><sup>đ</sup>
                     </td>
                     <td>
-                        <a class="btn-number " href="calculatecart?more=1&id=${i.id}">-</a>
+                        <a class="btn-number minus-quantity" style="cursor:pointer;">-
+                            <input class="product-id" type="hidden" value="${i.id}"></a>
                             ${i.quantity}
-                        <a class="btn-number" href="calculatecart?more=2&id=${i.id}">+</a>
+                        <a class="btn-number plus-quantity" style="cursor:pointer;">+
+                            <input class="product-id" type="hidden" value="${i.id}"></a>
                     </td>
                     <td>
                         <fmt:formatNumber type="number" maxFractionDigits="3"
-                                          value="${i.price * i.quantity}"/><sup>đ</sup>
+                                          value="${i.unitPrice * i.quantity}"/><sup>đ</sup>
                     </td>
                     <td>
-                        <a href="calculatecart?more=0&id=${i.id}">Xóa</a>
+                        <a href="/remove-cart?id=${i.id}">Xóa</a>
                     </td>
                 </tr>
             </c:forEach>
@@ -96,17 +98,18 @@
                 Tổng: <fmt:formatNumber type="number" maxFractionDigits="3" value="${totalPrice}"/><sup>đ</sup>
             </c:if>
         </h4>
-        <a href="products.jsp" class="btn btn-info mt-3">Tiếp tục mua hàng</a>
+        <a href="/home" class="btn btn-info mt-3">Tiếp tục mua hàng</a>
         <a href="checkout.jsp" class="btn btn-success float-right mt-3">Tiếp tục thanh toán</a>
-        <a href="removecart" class="btn btn-danger float-right mt-3 mr-2">Xóa giỏ hàng</a>
+        <a href="/remove-cart?id=0" class="btn btn-danger float-right mt-3 mr-2">Xóa giỏ hàng</a>
     </c:if>
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/cart.js"></script>
 </body>
 </html>

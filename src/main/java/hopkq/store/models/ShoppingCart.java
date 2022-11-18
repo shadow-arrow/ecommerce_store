@@ -8,6 +8,11 @@ import java.util.List;
 
 @Data
 public class ShoppingCart {
-    List<ProductModel> listProduct;
+
+    private Integer id;
+    private String name;
+    private Float unitPrice;
+    private Integer quantity;
+    private String imageLink;
 
 }
