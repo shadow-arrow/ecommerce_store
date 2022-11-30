@@ -6,4 +6,6 @@ public interface AccountDetailService {
 
     AccountDetail save(AccountDetail accountDetail);
 
+    AccountDetail getAccountDetailByID(int id);
+
 }

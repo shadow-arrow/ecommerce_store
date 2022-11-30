@@ -4,7 +4,7 @@
     Author     : Shado
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 
 <!-- User Side Nav -->
 <div class="row">
@@ -12,20 +12,20 @@
         <div class="side-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="user-profile.jsp">
+                    <a class="nav-link" href="/user-info">
                         <i class="mr-2"></i> Thông tin chung
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="orders">
-                        <i class="mr-2"></i> Đơn hàng
+                    <a class="nav-link" href="/user-orders">
+                        <i class="mr-2"></i> Đơn mua
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="history">
-                        <i class="mr-2"></i> Lịch sử mua hàng
-                    </a>
-                </li>
+                <%--                <li class="nav-item">
+                                    <a class="nav-link" href="history">
+                                        <i class="mr-2"></i> Lịch sử mua hàng
+                                    </a>
+                                </li>--%>
             </ul>
         </div>
     </div>

@@ -10,5 +10,7 @@ public interface AccountDetailRepository extends JpaRepository<AccountDetail, In
     AccountDetail save(AccountDetail accountDetail);
 
 
+    AccountDetail getAccountDetailById(int id);
+
 
 }

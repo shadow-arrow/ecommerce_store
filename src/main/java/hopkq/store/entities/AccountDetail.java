@@ -1,19 +1,20 @@
 package hopkq.store.entities;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "account_detail")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
 @ToString
 public class AccountDetail {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", nullable = false)
     private Integer id;
 
@@ -26,7 +27,7 @@ public class AccountDetail {
     @Column(name = "Gender", nullable = false)
     private Boolean gender = false;
 
-    @Column(name = "Address", nullable = false, length = 500)
+    @Column(name = "Address", nullable = true, length = 500)
     private String address;
 
     public Integer getId() {

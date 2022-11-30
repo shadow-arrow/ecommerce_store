@@ -1,14 +1,12 @@
 package hopkq.store.utils;
 
-import hopkq.store.entities.Account;
-import hopkq.store.entities.AccountDetail;
-import hopkq.store.entities.Product;
+import hopkq.store.entities.*;
+import hopkq.store.models.InformationOrder;
 import hopkq.store.models.RegisterAccount;
 import hopkq.store.models.ShoppingCart;
 
-import java.sql.Timestamp;
-
 public class DataTransferObject {
+
 
     public ShoppingCart convertProductToShoppingCart(Product product, int quantity) {
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -23,22 +21,57 @@ public class DataTransferObject {
     }
 
     public AccountDetail convertRegisterAccountToAccountDetail(RegisterAccount registerAccount) {
-        AccountDetail accountDetail = new AccountDetail();
-        accountDetail.setName(registerAccount.getName());
-        accountDetail.setPhoneNumber(registerAccount.getPhoneNumber());
-        accountDetail.setGender(registerAccount.getGender() == 1 ? true : false);
+        AccountDetail accountDetail = AccountDetail.builder()
+                .name(registerAccount.getName())
+                .phoneNumber(registerAccount.getPhoneNumber())
+                .gender(registerAccount.getGender() == 1 ? true : false)
+                .build();
         return accountDetail;
     }
 
     public Account convertRegisterAccountToAccount(RegisterAccount registerAccount) {
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        Account account = new Account();
-        account.setEmail(registerAccount.getEmail());
-        account.setPassword(registerAccount.getPassword());
-        account.setStatus(Common.Status.ACCOUNT_ACTIVE);
-        account.setRoleId(Common.Role.CUSTOMER);
-        account.setCreateDate(timestamp);
+        Account account = Account.builder()
+                .email(registerAccount.getEmail())
+                .password(registerAccount.getPassword())
+                .status(Common.Status.ACCOUNT_ACTIVE)
+                .roleId(Common.Role.CUSTOMER)
+                .createDate(Common.getCurrentTimestamp())
+                .build();
         return account;
+    }
+
+
+    public Order createOrder(int accountId, String note, float totalPrice) {
+
+        Order order = Order.builder()
+                .createDate(Common.getCurrentTimestamp())
+                .accountId(accountId)
+                .note(note)
+                .totalPrice(totalPrice)
+                .status(Common.Status.PROCESSING_ORDER)
+                .build();
+        return order;
+    }
+
+    public OrderDetail createOrderDetail(int orderId, ShoppingCart shoppingCart) {
+        OrderDetail orderDetail = OrderDetail.builder()
+                .orderId(orderId)
+                .productId(shoppingCart.getId())
+                .productName(shoppingCart.getName())
+                .productPrice(shoppingCart.getUnitPrice())
+                .productQuantity(shoppingCart.getQuantity())
+                .build();
+        return orderDetail;
+    }
+
+    public ShippingAddress createShippingAddress(int orderId, InformationOrder info) {
+        ShippingAddress shippingAddress = ShippingAddress.builder()
+                .orderId(orderId)
+                .name(info.getName())
+                .phoneNumber(info.getPhoneNumber())
+                .address(info.getAddress())
+                .build();
+        return shippingAddress;
     }
 
 

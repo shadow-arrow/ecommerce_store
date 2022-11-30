@@ -31,16 +31,16 @@
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="txtPassword">
                 </div>
-                <div class="form-group">
-                    <div class="col">
-                        <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="login-remember-me"
-                                   name="login-remember-me">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">Ghi nhớ mật khẩu</span>
-                        </label>
-                    </div>
-                </div>
+                <%--                <div class="form-group">
+                                    <div class="col">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="login-remember-me"
+                                                   name="login-remember-me">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Ghi nhớ mật khẩu</span>
+                                        </label>
+                                    </div>
+                                </div>--%>
                 <div class="form-group">
                     <div class="col">
                         <button type="submit" class="btn btn-sm">

@@ -20,5 +20,10 @@ public class AccountDetailServiceImpl implements AccountDetailService {
         return accountDetailRepository.save(accountDetail);
     }
 
+    @Override
+    public AccountDetail getAccountDetailByID(int id) {
+        return accountDetailRepository.getAccountDetailById(id);
+    }
+
 
 }

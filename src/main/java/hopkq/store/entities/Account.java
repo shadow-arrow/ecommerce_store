@@ -1,15 +1,18 @@
 package hopkq.store.entities;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.time.Instant;
+import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name = "account")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
 @ToString
 public class Account {
     @Id
@@ -34,6 +37,12 @@ public class Account {
 
     @Column(name = "Create_Date", nullable = false)
     private Timestamp createDate;
+
+
+    public String getFmDate() {
+        String timeStamp = new SimpleDateFormat("dd-MM-yyyy").format(this.createDate);
+        return timeStamp;
+    }
 
 
 }

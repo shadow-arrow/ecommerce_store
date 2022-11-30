@@ -3,6 +3,7 @@ package hopkq.store.controllers.client;
 
 import hopkq.store.models.RegisterAccount;
 import hopkq.store.services.RegisterAccountService;
+import hopkq.store.utils.Common;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,7 +28,12 @@ public class RegisterController {
 
         boolean result = registerAccountService.handleRegisterAccount(registerAccount);
 
-        return "redirect:/home";
+        if (result) {
+            modelMap.addAttribute("message", Common.Status.REGISTER_SUCCESS);
+        } else {
+            modelMap.addAttribute("message", Common.Status.REGISTER_FAILED);
+        }
+        return "register";
     }
 
 }

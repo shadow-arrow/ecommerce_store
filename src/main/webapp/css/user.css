@@ -1,19 +1,19 @@
-.table>thead>tr>th {
+.table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #d0d0d0;
     color: #555 !important;
     font-weight: 500;
 }
 
-.table>thead:first-child>tr:first-child>th {
+.table > thead:first-child > tr:first-child > th {
     border-top: 0;
 }
 
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>th {
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > th {
     padding: 9px 12px;
     line-height: 1.42857143;
     vertical-align: top;
@@ -21,15 +21,15 @@
     color: #555;
 }
 
-.table>thead>tr>th:hover {
+.table > thead > tr > th:hover {
     cursor: pointer;
 }
 
-.table>thead>tr>th:focus {
+.table > thead > tr > th:focus {
     outline-color: #d0d0d0;
 }
 
-.table>thead>tr>th .size {
+.table > thead > tr > th .size {
     font-size: 17px;
     padding-top: 2px;
 }
@@ -41,17 +41,17 @@
     border: 1px solid #d0d0d0;
 }
 
-.table-bordered>tbody>tr>td,
-.table-bordered>tbody>tr>th,
-.table-bordered>tfoot>tr>td,
-.table-bordered>tfoot>tr>th,
-.table-bordered>thead>tr>td,
-.table-bordered>thead>tr>th {
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
     border: 1px solid #d0d0d0;
 }
 
-.table-bordered>thead>tr>td,
-.table-bordered>thead>tr>th {
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
     border-bottom-width: 2px;
 }
 
@@ -126,7 +126,7 @@ label input:focus {
     float: right;
 }
 
-.paging_simple_numbers>a {
+.paging_simple_numbers > a {
     color: #555;
     width: 80px;
     height: 32px;
@@ -136,11 +136,11 @@ label input:focus {
     text-align: center;
 }
 
-.paging_simple_numbers>a:first-child {
+.paging_simple_numbers > a:first-child {
     border-right: none;
 }
 
-.paging_simple_numbers>span>a {
+.paging_simple_numbers > span > a {
     color: #555;
     border: 1px solid #d0d0d0;
     width: 32px;
@@ -171,21 +171,25 @@ label input:focus {
 
 /* Customer - Responsivve */
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     #example_filter {
         float: none;
     }
+
     label select {
         margin: 0 5px 0 20px;
     }
+
     .dataTables_paginate {
         float: left;
         margin-top: 10px;
     }
-    .paging_simple_numbers>a {
+
+    .paging_simple_numbers > a {
         width: 65px;
     }
-    .paging_simple_numbers>span>a {
+
+    .paging_simple_numbers > span > a {
         width: 28px;
     }
 }
@@ -293,4 +297,12 @@ td {
 
 .table .btn {
     padding: .4rem;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+#show-modal :hover {
+    color: #34ce57;
 }

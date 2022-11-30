@@ -1,7 +1,6 @@
 package hopkq.store.entities;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +9,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "status_product")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
 @ToString
 public class StatusProduct {
     @Id

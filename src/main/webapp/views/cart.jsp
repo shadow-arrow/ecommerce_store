@@ -99,7 +99,7 @@
             </c:if>
         </h4>
         <a href="/home" class="btn btn-info mt-3">Tiếp tục mua hàng</a>
-        <a href="checkout.jsp" class="btn btn-success float-right mt-3">Tiếp tục thanh toán</a>
+        <a href="/check-out-page" class="btn btn-success float-right mt-3">Tiếp tục thanh toán</a>
         <a href="/remove-cart?id=0" class="btn btn-danger float-right mt-3 mr-2">Xóa giỏ hàng</a>
     </c:if>
 </div>

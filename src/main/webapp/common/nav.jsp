@@ -38,7 +38,7 @@
                                     ${account.email}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="user-profile.jsp">Thông tin cá nhân</a>
+                                <a class="dropdown-item" href="/user-info">Thông tin cá nhân</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/logout">Đăng xuất</a>
                             </div>

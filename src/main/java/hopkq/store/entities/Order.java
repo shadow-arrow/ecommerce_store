@@ -1,21 +1,22 @@
 package hopkq.store.entities;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.math.BigDecimal;
-import java.time.Instant;
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name = "`order`")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
 @ToString
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", nullable = false)
     private Integer id;
 
@@ -23,10 +24,10 @@ public class Order {
     private Integer accountId;
 
     @Column(name = "Create_Date", nullable = false)
-    private Instant createDate;
+    private Timestamp createDate;
 
-    @Column(name = "Total_Price", precision = 18)
-    private BigDecimal totalPrice;
+    @Column(name = "Total_Price")
+    private Float totalPrice;
 
     @Column(name = "Note", length = 1000)
     private String note;
@@ -50,19 +51,19 @@ public class Order {
         this.accountId = accountId;
     }
 
-    public Instant getCreateDate() {
+    public Timestamp getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Instant createDate) {
+    public void setCreateDate(Timestamp createDate) {
         this.createDate = createDate;
     }
 
-    public BigDecimal getTotalPrice() {
+    public Float getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(BigDecimal totalPrice) {
+    public void setTotalPrice(Float totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -80,6 +81,12 @@ public class Order {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+
+    public String getFmDate() {
+        String timeStamp = new SimpleDateFormat("HH:mm dd-MM-yyyy").format(this.createDate);
+        return timeStamp;
     }
 
 }

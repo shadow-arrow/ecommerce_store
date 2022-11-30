@@ -81,5 +81,6 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="../js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/register.js"></script>
 </body>
 </html>

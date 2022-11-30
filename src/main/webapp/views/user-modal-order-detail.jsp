@@ -4,7 +4,7 @@
     Author     : Shado
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 
 <!-- The Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -22,13 +22,13 @@
                     <div class="products-info mt-2">
                         <table class="table mt-1 mb-1">
                             <thead>
-                                <tr>
-                                    <th scope="col">STT</th>
-                                    <th scope="col">Tên sản phẩm</th>
-                                    <th scope="col">Giá</th>
-                                    <th scope="col">Số lượng</th>
-                                    <th scope="col">Tổng</th>
-                                </tr>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Tổng</th>
+                            </tr>
                             </thead>
                             <tbody>
                             <c:if test="${listOrderDetail ne null}">
@@ -37,16 +37,18 @@
                                         <th scope="row">${no.index+1}</th>
                                         <td>${i.productName}</td>
                                         <td>
-                                    <fmt:formatNumber type="number" maxFractionDigits="3" value="${i.productPrice}"/><sup>đ</sup>
-                                    </td>
-                                    <td class="text-center">
-                                        ${i.quantity}
-                                    </td>
-                                    <td>
-                                    <fmt:formatNumber type="number" maxFractionDigits="3" value="${i.productPrice * i.quantity}"/><sup>đ</sup>
-                                    </td>
+                                            <fmt:formatNumber type="number" maxFractionDigits="3"
+                                                              value="${i.productPrice}"/><sup>đ</sup>
+                                        </td>
+                                        <td class="text-center">
+                                                ${i.quantity}
+                                        </td>
+                                        <td>
+                                            <fmt:formatNumber type="number" maxFractionDigits="3"
+                                                              value="${i.productPrice * i.quantity}"/><sup>đ</sup>
+                                        </td>
                                     </tr>
-                                </c:forEach> 
+                                </c:forEach>
                             </c:if>
                             </tbody>
                         </table>

@@ -1,15 +1,11 @@
 package hopkq.store.controllers.client;
 
 import hopkq.store.entities.Account;
-import hopkq.store.models.ShoppingCart;
 import hopkq.store.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Controller
@@ -40,9 +36,9 @@ public class LoginController {
         return "login";
     }
 
-    @ModelAttribute("account") // if session search cartList isn't exist -> initialize new cartList
+    @ModelAttribute("account")
     public Account account() {
-        return new Account();
+        return null;
     }
 
 }

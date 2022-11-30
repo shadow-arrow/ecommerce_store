@@ -1,20 +1,21 @@
 package hopkq.store.entities;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "order_detail")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
 @ToString
 public class OrderDetail {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", nullable = false)
     private Integer id;
 
@@ -30,8 +31,8 @@ public class OrderDetail {
     @Column(name = "Product_Quantity")
     private Integer productQuantity;
 
-    @Column(name = "Product_Price", precision = 18)
-    private BigDecimal productPrice;
+    @Column(name = "Product_Price")
+    private Float productPrice;
 
     public Integer getId() {
         return id;
@@ -73,11 +74,11 @@ public class OrderDetail {
         this.productQuantity = productQuantity;
     }
 
-    public BigDecimal getProductPrice() {
+    public Float getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(BigDecimal productPrice) {
+    public void setProductPrice(Float productPrice) {
         this.productPrice = productPrice;
     }
 
