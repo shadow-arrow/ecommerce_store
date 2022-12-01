@@ -2,6 +2,7 @@ package hopkq.store.controllers;
 
 import hopkq.store.entities.Account;
 import hopkq.store.services.AccountService;
+import hopkq.store.utils.Common;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,10 +28,14 @@ public class LoginController {
                         @ModelAttribute("account") Account account, ModelMap modelMap) {
 
         account = accountService.login(email, password);
-        if (account != null) {
+        if (account != null & account.getRoleId() == Common.Role.CUSTOMER) {
             modelMap.addAttribute("account", account);
             return "redirect:/home";
+        } else if (account != null & account.getRoleId() == Common.Role.ADMIN) {
+            return "redirect:/admin";
         }
+
+
         modelMap.addAttribute("message", "INVALID USER OR PASSWORD");
 
         return "login";

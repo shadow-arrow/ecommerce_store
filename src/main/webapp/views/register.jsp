@@ -1,8 +1,4 @@
-<%-- 
-    Document   : register
-    Created on : Aug 13, 2018, 1:32:22 AM
-    Author     : Shado
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>

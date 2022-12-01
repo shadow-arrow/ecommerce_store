@@ -1,8 +1,4 @@
-<%-- 
-    Document   : product-detail
-    Created on : Sep 26, 2018, 7:53:01 PM
-    Author     : nhatl
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

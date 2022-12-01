@@ -1,8 +1,4 @@
-<%-- 
-    Document   : user-profile
-    Created on : Aug 17, 2018, 8:21:23 PM
-    Author     : Shado
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

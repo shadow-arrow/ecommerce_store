@@ -1,8 +1,4 @@
-<%-- 
-    Document   : cart.jsp
-    Created on : Oct 10, 2018, 8:06:01 PM
-    Author     : nhatl
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : user-modal-order-detail
-    Created on : Nov 6, 2018, 2:52:30 AM
-    Author     : Shado
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 

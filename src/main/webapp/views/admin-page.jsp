@@ -1,8 +1,4 @@
-<%-- 
-    Document   : admin-index
-    Created on : Oct 20, 2018, 10:10:00 PM
-    Author     : Shado
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -21,11 +17,11 @@
     </head>
     <body>
         <%@include file="../common/admin-nav.jsp"%>
-        
-        <c:if test="${currentLoginAccount eq null}">
-            <c:redirect url="login.jsp"/>
+
+        <c:if test="${account eq null}">
+            <c:redirect url="/login-page"/>
         </c:if>
-        
+
         <!-- Cover -->
         <div id="main-contain" class="container">
             <div class="row">

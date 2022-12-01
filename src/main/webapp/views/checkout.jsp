@@ -1,8 +1,4 @@
-<%-- 
-    Document   : checkout
-    Created on : Oct 30, 2018, 11:41:05 PM
-    Author     : Shado
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
