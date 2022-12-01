@@ -3,6 +3,7 @@ package hopkq.store.services.impl;
 import hopkq.store.entities.Account;
 import hopkq.store.repositories.AccountRepository;
 import hopkq.store.services.AccountService;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,9 @@ public class AccountServiceImpl implements AccountService {
 
     @Autowired
     private AccountRepository accountRepository;
+
+    @Autowired
+    private BCrypt bCrypt;
 
     @Override
     public Account save(Account account) {
@@ -30,7 +34,7 @@ public class AccountServiceImpl implements AccountService {
         Account account = getAccountByEmail(email);
         if (account == null) return null;
         else {
-            if (account.getPassword().equals(password)) {
+            if (bCrypt.checkpw(password, account.getPassword())) {
                 return account;
             }
         }

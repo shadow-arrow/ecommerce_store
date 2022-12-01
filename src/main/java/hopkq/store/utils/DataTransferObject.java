@@ -4,8 +4,13 @@ import hopkq.store.entities.*;
 import hopkq.store.models.InformationOrder;
 import hopkq.store.models.RegisterAccount;
 import hopkq.store.models.ShoppingCart;
+import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class DataTransferObject {
+
+    @Autowired
+    private BCrypt bCrypt;
 
 
     public ShoppingCart convertProductToShoppingCart(Product product, int quantity) {
@@ -32,7 +37,7 @@ public class DataTransferObject {
     public Account convertRegisterAccountToAccount(RegisterAccount registerAccount) {
         Account account = Account.builder()
                 .email(registerAccount.getEmail())
-                .password(registerAccount.getPassword())
+                .password(bCrypt.hashpw(registerAccount.getPassword(), bCrypt.gensalt(10)))
                 .status(Common.Status.ACCOUNT_ACTIVE)
                 .roleId(Common.Role.CUSTOMER)
                 .createDate(Common.getCurrentTimestamp())

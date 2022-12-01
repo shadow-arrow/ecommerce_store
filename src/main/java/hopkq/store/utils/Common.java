@@ -11,6 +11,7 @@ public class Common {
         return timestamp;
     }
 
+
     public class Status {
         public static final String STATUS_PRODUCT_AVAILABLE = "1";
         public static final String STATUS_PRODUCT_SALE = "2";
