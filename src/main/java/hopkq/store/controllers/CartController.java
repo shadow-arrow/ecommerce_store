@@ -1,4 +1,4 @@
-package hopkq.store.controllers.client;
+package hopkq.store.controllers;
 
 import hopkq.store.models.AjaxResponseBody;
 import hopkq.store.models.ShoppingCart;

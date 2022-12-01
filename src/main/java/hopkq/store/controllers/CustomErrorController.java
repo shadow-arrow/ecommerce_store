@@ -1,4 +1,4 @@
-package hopkq.store.controllers.client;
+package hopkq.store.controllers;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
